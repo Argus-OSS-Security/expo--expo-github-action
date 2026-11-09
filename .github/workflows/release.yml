@@ -1,14 +1,15 @@
 name: release
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-    inputs:
-      release:
-        description: 'type "release" to open a release PR (main branch only)'
-        required: false
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+#     inputs:
+#       release:
+#         description: 'type "release" to open a release PR (main branch only)'
+#         required: false
+# 
 concurrency:
   group: release
   cancel-in-progress: false
